@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Overpass:ital,wght@1,300&display=swap');
+
+/* base styles & title */
+body{
+font-family: 'Andika New Basic', sans-serif;
+font-family: 'Overpass', sans-serif;
+cursor: pointer;
+}
+.App{
+  width:100%;
+  margin: 0 auto; 
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
+  font-family: 'Andika New Basic', sans-serif;
+  text-align: center;
+}
+.navbar h2{color:#04a8add0;}
+h2 span{padding:9px;}
+.navbar h6{
+  font-family: 'Andika New Basic', sans-serif;
+  color:#ddf6f7d0;
+  font-size: 1.2rem;
+}
+.navbar .icon2{color:rgba(255, 255, 255, 0.527);}
+/* upload form styles */
+.upload-form{
+ text-align: center;
+}
+.upload-form label input{
+  height: 0;
+  width: 0;
+  opacity: 0; 
+}
+.icon{
+  font-size: 2.5rem;
+  color:#0b878b;
+}
+/* progress bar styles */
+.progress-bar{
+  height: 5px;
+  background-color:#04a8add0 !important;
+  margin-top:20px;
+}
+/* image grid styles */
+.Image-Grid{
+  margin:20px auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:40px;
+}
+.image-wrap{
+  position: relative;
+  height:0;
+  padding:50% 0;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.image-wrap img{
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+.Modal{
+  width:100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background:rgba(0,0,0,0.5);
+}
+.Modal img{
+  width:40%;
+  height:80%;
+  margin:60px auto;
+  display: block;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border:3px solid white;
+  position: relative;
+}
+.login-form,
+.signup-form{
+padding:40px;
+margin:30px auto;
+width:60%;
+background-color: #1181869f;
+border-radius: 20px;
+}
+
+.output{
+  height:60px;
+  font-size:0.8rem;
+}
+
+.error{
+  color:red;
+}
