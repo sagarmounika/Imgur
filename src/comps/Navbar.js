@@ -14,15 +14,15 @@ const Navigation = () => {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand as={NavLink} to='/' className="p-2 navbar"><h2> <span><FontAwesomeIcon className="icon2"icon={ faCameraRetro}/></span>IMGUR </h2>
       </Navbar.Brand>
-      <Nav className="mr-auto">
+      {/* <Nav className="mr-auto">
         <Nav.Link as={NavLink} to='/'><h6>Home </h6></Nav.Link>
         <Nav.Link as={NavLink} to='/signup'><h6>Sign Up</h6></Nav.Link>
         <Nav.Link as={NavLink} to='/login'> <h6>Login</h6> </Nav.Link> 
-      </Nav>
-      <Form inline>
+      </Nav> */}
+      {/* <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
         <Button variant="outline-info">Search</Button>
-      </Form>
+      </Form> */}
     </Navbar>
   );
 };

@@ -1,12 +1,14 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 import {motion} from 'framer-motion';
-
+import { Container } from 'react-bootstrap';
 const ImageGrid=({setselectedImg})=>{
   const {docs} = useFirestore('images');
   console.log(docs);
   return(
-    
+    <Container>
+
+   
     <div className="Image-Grid">
       {docs && docs.map(doc=>(
         <motion.div className="image-wrap" key={doc.id}
@@ -20,6 +22,7 @@ const ImageGrid=({setselectedImg})=>{
         </motion.div>
       ))}
         </div>
+        </Container>
   )
 }
 export default ImageGrid;
