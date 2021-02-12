@@ -18,6 +18,11 @@ body {
 .navbar h2 {
   color: #04a8add0;
 }
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
 h2 span {
   padding: 9px;
 }
@@ -26,6 +31,15 @@ h2 span {
   color: #ddf6f7d0;
   font-size: 1.2rem;
 }
+.navbar_right {
+  margin-left: auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  color: #089499;
+  text-transform: capitalize !important;
+}
+
 .navbar .icon2 {
   color: rgba(255, 255, 255, 0.527);
 }
@@ -103,7 +117,9 @@ h2 span {
   border-radius: 10px !important;
   box-shadow: 2px 2px 2px rgb(56, 56, 56);
 }
-.login .btn {
+
+.login .btn,
+.navbar_right .btn {
   color: #089499;
   font-weight: 800;
   border: none !important;
@@ -111,9 +127,12 @@ h2 span {
   outline: none !important;
   background-color: rgb(36, 36, 36) !important;
 }
-.login .btn:hover,
-.login .btn:focus,
-.login .btn:active {
+.login > h1{
+  color:rgb(167, 3, 3) !important;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
@@ -125,4 +144,11 @@ h2 span {
 
 .error {
   color: red;
+}
+.navbar_right .btn {
+  background-color: #0b878bbd !important;
+  color: rgba(255, 255, 255, 0.527) !important;
+  padding: 0.8em;
+  margin-left: 10px;
+  font-weight: 600;
 }

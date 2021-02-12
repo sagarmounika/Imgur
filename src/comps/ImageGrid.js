@@ -5,7 +5,6 @@ import { Container } from "react-bootstrap";
 
 const ImageGrid = ({ setselectedImg }) => {
   const { docs } = useFirestore("images");
-  console.log(docs);
 
   return (
     <Container>

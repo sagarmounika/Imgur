@@ -1,25 +1,23 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Jumbotron, Button } from "react-bootstrap";
 import { auth, provider } from "../firebase/config";
 import { UserContext } from "./UserContext";
-import { Redirect, Switch, Route } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 
 const Login = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
   const { value, setValue } = useContext(UserContext);
-  const signIn = () => {
+  const signIn = (e) => {
+    e.preventDefault();
     auth
       .signInWithPopup(provider)
-      .then((result) => {
-        console.log(result);
-        setLoggedIn(true);
+      .then(() => {
         setValue(true);
       })
       .catch((error) => {
         alert(error.message);
       });
   };
-  if (loggedIn) {
+  if (value) {
     return (
       <Route exact path="/">
         <Redirect to="/home" />
@@ -29,7 +27,6 @@ const Login = () => {
 
   return (
     <Jumbotron fluid className="login">
-      <h6>{value}</h6>
       <h1>IMGUR</h1>
       <h4>Sign in to Imgur</h4>
       <p>

@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-// import isLogin from "../App";
 import { Redirect, Route } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 function PrivateRoute({ component: Component, ...rest }) {
-  const { value, setValue } = useContext(UserContext);
-  console.log(value);
+  const { value } = useContext(UserContext);
+
   return (
     <Route
       {...rest}
